@@ -1,19 +1,19 @@
+global print
+
 section .data
-formato: db "%d, %f, %s",0
-
-global imprimir
+formato : dw "%i , %f, %s",10, 0
+ 
 extern printf
-
 section .text
-imprimir:
+print:
+push rbp ;Se necesita esto??
+mov rbp, rsp
 
-    push rbp
+mov edx, esi
+mov rsi, rdi
+mov rdi, formato
 
-    mov rsi, rdi       ;guardo el int que me dieron
-    mov rdx, rsi       ;guardo el string que me dieron
-    mov rdi, formato   ;pongo el formato en su lugar para llamar printf
-    mov rax, 1
-    call printf
-
-    pop rbp
-    ret
+mov rax, 1
+call printf
+pop rbp
+ret

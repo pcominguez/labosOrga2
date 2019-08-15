@@ -1,5 +1,5 @@
-extern void imprimir(int a, double f, char* s);
-
+extern void print( int a, double f, char* s );
 int main(){
-    imprimir(4, 0.568786876 ,"asdf");
+	print(45, 454.02, "velez");
 }
+//Por que aca no va el return?
