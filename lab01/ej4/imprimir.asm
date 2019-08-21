@@ -2,7 +2,7 @@ section .data
 formato : db "%i , %f, %s",10, 0
 
 global print 
-extern printf
+extern printf; SI USO FUNCIONES DE LA BIBLIOTECA DE C TENGO QUE EJECUTAR ASI gcc -o ejec -no-pie imprimir.c imprimir.o SINO NO FUNCIONA
 
 section .text
 print:
